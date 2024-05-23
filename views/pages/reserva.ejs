@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/reserva.css">
+</head>
+<body>
+    <header>
+        <h1>Parque de Atracciones Galaxy Park</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/atracciones">Atracciones</a></li>
+                <li><a href="/reserva">Tu reserva</a></li>
+                <li><a href="/compra">Comprar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="consulta-container">
+        <h1>Consulta tu Reserva</h1>
+        <form action="/consultar_reserva" method="POST">
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="codigo_reserva">Código de Reserva:</label>
+                <input type="text" id="codigo_reserva" name="codigo_reserva" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Consultar</button>
+            </div>
+        </form>
+    </div>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos:</p>
+        <address>
+            Parque de Atracciones Galaxy Park<br>
+            Dirección: Calle XYZ, Ciudad Bogotá<br>
+            Teléfono: 123-456-789<br>
+            Correo Electrónico: info@parquedeatraccionesgp.com
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Parque de Atracciones Galaxy Park - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/reserva.css">
+</head>
+<body>
+    <header>
+        <h1>Parque de Atracciones Galaxy Park</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/atracciones">Atracciones</a></li>
+                <li><a href="/reserva">Tu reserva</a></li>
+                <li><a href="/compra">Comprar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="detalle-container">
+        <h2>Detalle de la Reserva</h2>
+        <p><strong>Nombre:</strong> <%= reserva.nombre %> <%= reserva.apellido %></p>
+        <p><strong>Email:</strong> <%= reserva.email %></p>
+        <p><strong>Pase ID:</strong> <%= reserva.pase_id %></p>
+        <p><strong>Cantidad:</strong> <%= reserva.cantidad %></p>
+        <p><strong>Fecha de Visita:</strong> <%= reserva.fecha_visita %></p>
+        <p><strong>Método de Pago:</strong> <%= reserva.metodo_pago %></p>
+        <p><strong>Código de Reserva:</strong> <%= reserva.codigo_reserva %></p>
+
+        <h3>Atracciones</h3>
+        <% atracciones.forEach(atraccion => { %>
+            <div class="atraccion">
+                <p class="<%= atraccion.visitada ? 'visitada' : 'pendiente' %>">
+                    <strong><%= atraccion.nombre %></strong> - <%= atraccion.visitada ? 'Visitada' : 'Pendiente' %>
+                </p>
+            </div>
+        <% }); %>
+    </div>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos:</p>
+        <address>
+            Parque de Atracciones Galaxy Park<br>
+            Dirección: Calle XYZ, Ciudad Bogotá<br>
+            Teléfono: 123-456-789<br>
+            Correo Electrónico: info@parquedeatraccionesgp.com
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Parque de Atracciones Galaxy Park - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

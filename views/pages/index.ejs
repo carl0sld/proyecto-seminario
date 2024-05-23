@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= titulo %></title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <header>
+        <h1>Parque de Atracciones Galaxy Park</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/atracciones">Atracciones</a></li>
+                <li><a href="/reserva">Tu reserva</a></li>
+                <li><a href="/compra">Comprar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido al Parque de Atracciones Galaxy Park</h2>
+        <p>¡Experimenta la emoción y la diversión en nuestro parque de atracciones!</p>
+    </section>
+
+    <section id="pases">
+        <h2>Nuestros Pases</h2>
+        <p>Disfruta de una experiencia unica con las atraccion incluidas en cada pas</p>
+        <div class="pase-container">
+            <% Object.values(pases).forEach(pase => { %>
+                <div class="pase">
+                    <img src="<%= pase.imagen %>" alt="<%= pase.nombre %>">
+                    <div class="pase-title"><%= pase.nombre %></div>
+                    <div class="pase-details">Precio: $<%= pase.precio %></div>
+                    <a href="/pase/<%= pase.id %>" class="ver-mas-btn">Ver más</a>
+                    <a href="/compra" class="comprar-btn">Comprar</a>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos:</p>
+        <address>
+            Parque de Atracciones Galaxy Park<br>
+            Dirección: Calle XYZ, Ciudad Bogotá<br>
+            Teléfono: 123-456-789<br>
+            Correo Electrónico: info@parquedeatraccionesgp.com
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Parque de Atracciones Galaxy Park - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

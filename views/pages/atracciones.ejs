@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/atracciones.css">
+</head>
+<body>
+    <header>
+        <h1>Parque de Atracciones Galaxy Park</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/atracciones">Atracciones</a></li>
+                <li><a href="/reserva">Tu reserva</a></li>
+                <li><a href="/compra">Comprar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="atracciones">
+        <div class="card-container">
+            <% atracciones.forEach(atraccion => { %>
+                <div class="card">
+                    <img src="<%= atraccion.imagen %>" alt="<%= atraccion.nombre %>">
+                    <div class="card-title"><%= atraccion.nombre %></div>
+                    <div class="card-description"><%= atraccion.descripcion %></div>
+                    <div class="card-details">
+                        <p>Altura mínima: <%= atraccion.altura_minima %> cm</p>
+                        <p>Tiempo de duración: <%= atraccion.tiempo_duracion %></p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, contáctanos:</p>
+        <address>
+            Parque de Atracciones Galaxy Park<br>
+            Dirección: Calle XYZ, Ciudad Bogotá<br>
+            Teléfono: 123-456-789<br>
+            Correo Electrónico: info@parquedeatraccionesgp.com
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Parque de Atracciones Galaxy Park - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

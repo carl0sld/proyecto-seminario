@@ -1,0 +1,96 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+address {
+    font-style: italic;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#inicio h2, #inicio p {
+    margin: 10px 0;
+}
+
+.pase-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pase {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.pase:hover {
+    transform: scale(1.05);
+}
+.pase-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.pase-details {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.pase-benefits {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.pase img {
+    height: 280px;
+    width: 280px;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
